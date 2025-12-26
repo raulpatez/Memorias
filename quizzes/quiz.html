@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<div class="quiz-box">
+    <h2 id="titulo-quiz">Quiz</h2>
+
+    <p id="usuario"></p>
+
+    <div id="quiz"></div>
+
+    <button onclick="finalizarQuiz()">Enviar respostas</button>
+
+    <button onclick="voltarHome()" style="margin-top:15px">
+        Voltar para o início
+    </button>
+
+    <p id="resultado"></p>
+</div>
+
+<!-- Firebase CDN -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+
+<!-- Firebase config -->
+<script src="../firebase/firebase.js"></script>
+
+<!-- Tema global -->
+<script src="../js/theme.js"></script>
+
+<!-- JS do index -->
+<script src="script.js"></script>
+
+<script src="quiz.js"></script>
+</body>
+</html>
