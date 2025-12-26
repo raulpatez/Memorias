@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente de Natal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PROTEÇÃO DE LOGIN -->
+<script>
+  if (!localStorage.getItem("uid")) {
+    window.location.href = "login/login.html";
+  }
+</script>
+
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">BEXIGAS</div>
+    
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#integrantes">Integrantes</a>
+        <a href="#momentos">Carta</a>
+        <a href="#ranking">Ranking</a>
+        <a href="#creditos">Créditos</a>
+    </nav>
+
+    <div class="header-right">
+        <!-- BOTÃO TOGGLE DE TEMA -->
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider round"></span>
+        </label>
+
+        <!-- FOTO DE PERFIL -->
+        <a href="perfil/perfil.html">
+            <img src="" alt="Perfil" class="perfil-icon" id="perfilHeader">
+        </a>
+
+        <!-- BOTÃO DE SAIR -->
+        <button class="logout-btn" onclick="logout()">Sair</button>
+    </div>
+</header>
+
+<!-- INÍCIO -->
+ <section id="inicio" class="inicio">
+        <div class="inicio-container">
+            <img class="foto-fundo fade-in" id="bannerGrupo" src="grupo1.png" alt="Foto do grupo">
+
+            <div class="overlay"></div>
+
+            <div class="texto-centro reveal">
+                <h1>Feliz Natal, Amigos!</h1>
+                <p>
+                    O grupo Bexigas será o melhor grupo de amigos que eu já tive em anos.
+                    Com pessoas maravilhosas, companheiras e divertidas.
+                    E para agradecer por tantos momentos incríveis produzí esse website com muito carinho e dedicação.
+                    Espero que todos gostem! Feliz Natal meus divos e divas!
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+<!-- INTEGRANTES -->
+<section id="integrantes" class="integrantes">
+    <h2 class="reveal">Integrantes do Grupo</h2>
+
+    <div class="carrossel-container reveal">
+        <button class="seta esquerda" onclick="voltarCarrossel()">&#10094;</button>
+
+        <div class="carrossel" id="carrossel">
+
+    <a class="card-link" href="amigos/amigo1/amigo1.html">
+        <div class="card"><img src="integrante1.png"><p>Ana</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo2/amigo2.html">
+        <div class="card"><img src="integrante2.png"><p>Daniel</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo3/amigo3.html">
+        <div class="card"><img src="integrante3.png"><p>Felipe</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo4/amigo4.html">
+        <div class="card"><img src="integrante4.png"><p>Gabriel</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo5/amigo5.html">
+        <div class="card"><img src="integrante5.png"><p>Kauan</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo6/amigo6.html">
+        <div class="card"><img src="integrante6.png"><p>Larissa</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo7/amigo7.html">
+        <div class="card"><img src="integrante7.png"><p>Laysa</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo8/amigo8.html">
+        <div class="card"><img src="integrante8.png"><p>Lucas</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo9/amigo9.html">
+        <div class="card"><img src="integrante9.png"><p>Pedro</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo10/amigo10.html">
+        <div class="card"><img src="integrante10.png"><p>Raul</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo11/amigo11.html">
+        <div class="card"><img src="integrante11.png"><p>Sofia</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo12/amigo12.html">
+        <div class="card"><img src="integrante12.png"><p>Tiago</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo13/amigo13.html">
+        <div class="card"><img src="integrante13.png"><p>Vivi</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo14/amigo14.html">
+        <div class="card"><img src="integrante14.png"><p>VG</p></div>
+    </a>
+
+    <a class="card-link" href="amigos/amigo15/amigo15.html">
+        <div class="card"><img src="integrante15.png"><p>Yasmin</p></div>
+    </a>
+
+</div>
+
+        <button class="seta direita" onclick="avancarCarrossel()">&#10095;</button>
+    </div>
+</section>
+
+<section class="bloco-duplo">
+
+   <!-- MOMENTOS -->
+<div id="momentos" class="caixa momentos">
+    <h2 class="reveal">Minha Carta para Vocês</h2>
+
+    <div class="carta-video">
+        <video class="video-carta" controls playsinline>
+    <source src="video1.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+</video>
+    </div>
+</div>
+
+
+    <!-- RANKING -->
+    <div id="ranking" class="caixa ranking">
+        <h2>Ranking</h2>
+        <div id="lista-ranking"></div>
+    </div>
+
+</section>
+
+<!-- CRÉDITOS -->
+<footer id="creditos" class="creditos">
+    <p>Feito com ❤️ para o grupo Bexigas</p>
+</footer>
+
+<!-- Firebase CDN -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+
+<!-- Firebase config -->
+<script src="firebase/firebase.js"></script>
+
+<!-- Tema global -->
+<script src="js/theme.js"></script>
+
+<!-- JS do index -->
+<script src="script.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
